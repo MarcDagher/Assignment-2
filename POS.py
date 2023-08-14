@@ -102,7 +102,7 @@ def Open_Receipt(available_items):
     
         add_more = input("Would you like to add more items? [Answer yes or no] ") # Ask add more?
 
-        print(add_extra_items(add_more, list_of_barcodes)) ## Extra items function returns displayed receipt 
+        add_extra_items(add_more, list_of_barcodes) ## Extra items function returns displayed receipt 
         new_receipt = input("Open New Receipt? [Answer yes or no] ")
 
     if new_receipt == "No" or new_receipt == "no":
@@ -111,4 +111,4 @@ def Open_Receipt(available_items):
         print("Wrong Entry. Please type correctly.")
         return Open_Receipt(available_items)
 
-print(Open_Receipt(available_items))
+Open_Receipt(available_items)
